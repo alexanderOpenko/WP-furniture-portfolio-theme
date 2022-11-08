@@ -22,4 +22,14 @@ function workportfolio_setup() {
 }
 
 add_action('after_setup_theme', 'workportfolio_setup');
+
+/**
+ * REQUIRED FILES
+ * Include required files.
+ */
+require get_template_directory() . '/assets/helpers/icons.php';
+
+require get_template_directory() . '/inc/template-tags.php';
 ?>
+
+

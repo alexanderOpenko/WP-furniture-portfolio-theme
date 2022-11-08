@@ -3,59 +3,163 @@
     margin: 0;
     letter-spacing: 2px;
     font-size: 32px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.activeHeader {
+    background-color: #000;
+    color: white;
+}
+
+.activeHeader .desktop_header a:not(.desktop_header .sub-menu a) {
+    color: white;
+}
+
+.activeHeader .submenu_arrow svg{
+    fill: white;
 }
 
 header {
-    display: flex;
+    background-color: white;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    transition: .2s ease-in;
     z-index: 1;
 }
 
-header .menu {
+.desktop_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.desktop_header .menu {
     display: flex;
 }
 
-header .menu .menu-item:first-child {
+.desktop_header .menu .menu-item:first-child {
     padding-left: 0;
 }
 
-header .menu .menu-item:last-child {
+.desktop_header .menu .menu-item:last-child {
     padding-right: 0;
 }
 
-header .menu-item:not(.sub-menu li) {
-    padding: 0 15px;
+.desktop_header .menu-item:not(.sub-menu li) {
+    padding: 29px 15px;
 }
 
-header .menu-item:hover .sub-menu {
+.desktop_header .menu-item:hover .sub-menu {
     display: block;
 }
 
-header .sub-menu {
+.desktop_header .sub-menu {
     display: none;
     position: absolute;
+    right: 0;
+    left: 0;
+    top: 100%;
     background-color: white;
-    border: 1px solid rgb(35, 27, 12);
-    margin-top: 20px;
-    padding: 0 10px 10px;
-    max-width: 100px;
+    border-bottom: 1px solid rgb(35, 27, 12);
+    padding: 0 20px 20px;
     text-align: center;
 }
 
-header .sub-menu .menu-item {
+.desktop_header .sub-menu .menu-item {
     padding-top: 10px;
 }
 
-.header_nav-menu .menu-item-has-children {
+.desktop_header_nav-menu .menu-item-has-children {
     display: flex;
     justify-content: center;
 }
+
+.desktop_header_nav-menu .submenu_arrow {
+    pointer-events: none;
+}
+
+.activeHeader .burger_menu svg path {
+    fill: white;
+}
+
+.toggle_menu {
+    cursor: pointer;
+}
+
+.toggle_menu svg {
+    width: 25px;
+}
+
+.active .close_icon {
+    display: block;
+}
+
+.active .burger_menu {
+    display: none;
+}
+
+.mobile_menu {
+    background-color: white;
+    padding: 20px;
+}
+
+header .itemWrapper {
+    width: 100%;
+    display: flex;
+}
+
+.submenu_arrow {
+    padding-top: 2px;
+    margin-left: 7px;
+}
+
+li.active .submenu_arrow {
+transform: scaleY(-1);
+}
+
+.desktop_header .itemWrapper svg {
+    width: 13px;
+}
+
+.mobile_menu .itemWrapper svg {
+    width: 15px;
+    margin: 0 0 0 auto;
+}
+
+.mobile_menu .menu-item {
+    padding: 15px 0;
+}
+
+.mobile_menu .menu-item {
+    border-bottom: 1px solid black;
+}
+
+.mobile_menu .menu-item:first-child {
+    padding-top: 0;
+}
+
+.mobile_menu .menu-item.active {
+    padding-bottom: 0;
+}
+
+.mobile_menu .sub-menu {
+    padding: 10px 0 0 15px;
+}
+
+.mobile_menu .menu-item.active {
+    border: none;
+}
+
+.mobile_menu .submenu_arrow {
+    width: 100%;
+}
+
+@media screen and (max-width: 768) {}
 
 /* endheader */
 .hero {
@@ -116,6 +220,7 @@ button {
 .primaryButton {}
 
 .secondaryButton {
+    margin-top: 20px;
     padding: 10px 15px;
     border: 1px solid black;
     border-radius: 20px;
@@ -135,8 +240,6 @@ ul {
     padding: 0;
 }
 
-li {}
-
 .dash {
     height: 1px;
     width: 22px;
@@ -148,8 +251,32 @@ li {}
     display: none;
 }
 
+[data-toggle-item] {
+    display: none;
+}
+
 .align-center {
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .large_hidden_low_visible {
+        display: block;
+    }
+
+    .large_visible_low_hidden {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .large_hidden_low_visible {
+        display: none;
+    }
+
+    .large_visible_low_hidden {
+        display: block;
+    }
 }
 
 /* endothers */
@@ -216,13 +343,17 @@ li {}
     margin: 0;
 }
 
-.active .accordionServices_content,
+.active[data-toggle-item],
 .active .accordion_hiden {
     display: block;
 }
 
 .active .accordion_show {
     display: none;
+}
+
+.active {
+    display: block;
 }
 
 /* end frond page */
@@ -284,6 +415,7 @@ li {}
 .customPost {
     display: flex;
     justify-content: center;
+    padding: 0 20px;
 }
 
 .customPost_content {

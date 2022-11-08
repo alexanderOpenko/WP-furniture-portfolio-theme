@@ -1,6 +1,6 @@
 <div class="columnSection">
     <h1 class="columnSection_heading align-center">
-        <?php the_title(); ?>
+        <?php the_field('title'); ?>
     </h1>
 
     <div class="columnSection_wrapper">

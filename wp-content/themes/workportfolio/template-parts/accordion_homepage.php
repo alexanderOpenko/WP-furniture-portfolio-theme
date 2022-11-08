@@ -3,11 +3,11 @@
         <div class="accordionServices_body">
             <div class="accordionServices_heading">
                 <h1>
-                    <?php the_title() ?>
+                    <?php the_field('accordion_title') ?>
                 </h1>
 
                 <span>
-                    <a>by Litvinenko</a>
+                    <a><?php the_field('accordion_subtitle') ?></a>
                 </span>
             </div>
 
@@ -39,7 +39,7 @@
                             </div>
                         </div>
 
-                        <div class="accordionServices_content hidden">
+                        <div class="accordionServices_content hidden" data-toggle-item>
                             <?php echo $content ?>
                         </div>
                     <?php endwhile; ?>

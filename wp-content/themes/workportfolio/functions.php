@@ -23,6 +23,7 @@ function workportfolio_setup() {
 
 add_action('after_setup_theme', 'workportfolio_setup');
 
+
 /**
  * REQUIRED FILES
  * Include required files.

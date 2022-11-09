@@ -5,11 +5,11 @@
             <?php the_field('hero_heading') ?>
         </h1>
 
-        <h3 class="hero_subheading">
+        <h5 class="hero_subheading">
             <?php the_field('hero_subheading') ?>
-        </h3>
+        </h5>
 
-        <button class="secondaryButton">
+        <button class="primaryButton">
             Замовити меблі
         </button>
     </div>
@@ -17,5 +17,7 @@
 
     <div class="hero_image">
         <img src="<?php the_field('hero_image') ?>" />
+    </div>
+    <div class="blure_background">
     </div>
 </div>

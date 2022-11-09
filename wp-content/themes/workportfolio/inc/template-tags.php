@@ -1,6 +1,6 @@
 <?php
 function workpportfolio_add_sub_toggles_to_main_menu($args, $item, $depth) {
-    $args->before = '<div class="itemWrapper">';
+    $args->before = '<div class="itemWrapper body3">';
     $args->after = '';
 
     // Add a toggle to items with children.

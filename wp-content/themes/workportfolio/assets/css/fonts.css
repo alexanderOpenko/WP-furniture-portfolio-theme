@@ -1,0 +1,24 @@
+@font-face {
+    font-family: camforta;
+    src: url('../fonts/Comfortaa-SemiBold.woff2');
+}
+
+@font-face {
+    font-family: roboto-light;
+    src: url('../fonts/Robotocondensedlight.ttf');
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../fonts/Robotocondensed.ttf');
+}
+
+@font-face {
+    font-family: clear-sans-light;
+    src: url('../fonts/clearsanslight.ttf');
+}
+
+@font-face {
+    font-family: clear-sans;
+    src: url('../fonts/clearsans.ttf');
+}

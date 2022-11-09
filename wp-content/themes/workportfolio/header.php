@@ -27,9 +27,9 @@
         ?>
 
         <div class='desktop_header'>
-            <h3 class="logo">
+            <h1 class="logo">
                 LITVINENKO
-            </h3>
+            </h2>
 
             <div class="desktop_header_nav-menu large_visible_low_hidden">
                 <?php header_menu() ?>

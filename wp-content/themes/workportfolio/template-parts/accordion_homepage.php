@@ -6,7 +6,7 @@
                     <?php the_field('accordion_title') ?>
                 </h1>
 
-                <span>
+                <span class="body3">
                     <a><?php the_field('accordion_subtitle') ?></a>
                 </span>
             </div>
@@ -20,9 +20,9 @@
                         ?>
 
                         <div class="accordionServices_title" data-toggle-target data-type='accordion'>
-                            <h3>
+                            <h5>
                                 <?php echo $title ?>
-                            </h3>
+                            </h5>
 
                             <div>
                                 <span class="accordion_show">
@@ -39,7 +39,7 @@
                             </div>
                         </div>
 
-                        <div class="accordionServices_content hidden" data-toggle-item>
+                        <div class="accordionServices_content body2 hidden" data-toggle-item>
                             <?php echo $content ?>
                         </div>
                     <?php endwhile; ?>
@@ -50,5 +50,7 @@
         <div class="accordionServices_image margin-left">
             <img src="<?php the_field('accordion_image') ?>" />
         </div>
+    </div>
+    <div class="blure_background">
     </div>
 </div>

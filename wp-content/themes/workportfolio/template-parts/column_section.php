@@ -11,7 +11,7 @@
                 <?php while (have_rows('service_item' . $i)) : the_row(); ?>
                     <?php
                     $title = get_sub_field('title');
-                    $image = get_sub_field('image');
+                    $image = get_sub_field('benefit_image');
                     $desc = get_sub_field('description');
                     ?>
                     <div class="columnSection_img">
@@ -24,7 +24,7 @@
                         </h3>
                     <?php endif ?>
 
-                    <div class="columnSection_description">
+                    <div class="columnSection_description captured">
                         <?php echo $desc ?>
                     </div>
                 <?php endwhile; ?>
